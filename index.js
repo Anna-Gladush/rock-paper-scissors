@@ -1,11 +1,11 @@
-let humanSelection = getHumanChoice();
-let computerSelection = getComputerChoice();
+let humanSelection;
+let computerSelection;
 
 let humanScore =0;
 let computerScore = 0;
 let tie = 0;
 
-console.log(playRound(humanSelection, computerSelection));
+playGame(5);
 
 function getComputerChoice() {
     const computerChoice = Math.random();
@@ -40,4 +40,12 @@ function playRound(humanChoice, computerChoice) {
         return result;
     }
     console.log(result)
+}
+
+function playGame(num) {
+    for (let i = 0; i < num; i++) {
+        humanSelection = getHumanChoice();
+        computerSelection = getComputerChoice();
+        console.log(playRound(humanSelection, computerSelection));
+    }
 }
