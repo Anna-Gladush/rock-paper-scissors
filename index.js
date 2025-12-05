@@ -35,12 +35,12 @@ function playRound(humanChoice, computerChoice) {
         result = `It\'s a tie. 
 Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
 
-    } else if ((humanChoice === 'rock' & computerChoice === 'scissors') || (humanChoice === 'scissors' & computerChoice === 'paper') || (humanChoice === 'paper' & computerChoice === 'rock')) {
+    } else if ((humanChoice === 'rock' && computerChoice === 'scissors') || (humanChoice === 'scissors' && computerChoice === 'paper') || (humanChoice === 'paper' && computerChoice === 'rock')) {
         humanScore ++;
         result = `You win! ${humanChoice} beats ${computerChoice}. 
 Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
 
-    }  else if ((humanChoice === 'scissors' & computerChoice === 'rock') || (humanChoice === 'paper' & computerChoice === 'scissors') || (humanChoice === 'rock' & computerChoice === 'paper')) {
+    }  else if ((humanChoice === 'scissors' && computerChoice === 'rock') || (humanChoice === 'paper' && computerChoice === 'scissors') || (humanChoice === 'rock' && computerChoice === 'paper')) {
         computerScore ++;
         result = `You lose! ${computerChoice} beats ${humanChoice}. 
 Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
