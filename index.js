@@ -22,6 +22,7 @@ function playRound(humanChoice, computerChoice) {
     const div = document.querySelector('.results');
     div.innerHTML = '';
     const p = document.createElement('p');
+    p.classList.add('winner')
     div.appendChild(p);
     if (humanChoice === computerChoice) {
         tie ++;
@@ -57,20 +58,24 @@ function playGame() {
             }
             const computerChoice = getComputerChoice();
             playRound(userChoice, computerChoice);
+            gameScore();
         });
     })
 }
 
-
-// function playGame(num = 1) {
-//     for (let i = 0; i < num; i++) {
-//         humanSelection = getHumanChoice();
-//         computerSelection = getComputerChoice();
-//         console.log(playRound(humanSelection, computerSelection));
-//     }
-// }
-
 function gameScore() {
-
+    const p = document.querySelector('.winner')
+    if (humanScore === 5) {
+        p.innerText = 'You won the game! Congrats!';
+        humanScore = 0;
+        computerScore = 0; 
+        tie = 0;
+    } else if (computerScore === 5) {
+        p.innerText = 'Computer won the game! Better luck next time!';
+        humanScore = 0;
+        computerScore = 0; 
+        tie = 0;
+    }
 }
+
 playGame();
