@@ -6,15 +6,21 @@ let tie = 0;
 
 function getComputerChoice() {
     const computerChoice = Math.random();
-    if (computerChoice <= 1/3) {
+    if (computerChoice <= 1/5) {
         console.log(`Computer's move: rock`);
         return 'rock';
-    } else if (1/3 < computerChoice && computerChoice <= 2/3) {
+    } else if (1/5 < computerChoice && computerChoice <= 2/5) {
         console.log(`Computer's move: paper`);
         return 'paper';
-    } else if (2/3 < computerChoice && computerChoice <= 1) {
+    } else if (2/5 < computerChoice && computerChoice <= 3/5) {
         console.log(`Computer's move: scissors`);
         return 'scissors'
+    } else if (3/5 < computerChoice && computerChoice <= 4/5) {
+        console.log(`Computer's move: lizard`);
+        return 'lizard'
+    } else if (4/5 < computerChoice && computerChoice <= 1) {
+        console.log(`Computer's move: Spock`);
+        return 'spock'
     }
 }
 
