@@ -61,6 +61,10 @@ function playGame() {
                 userChoice = 'paper';
             } else if (button.innerHTML === 'Scissors') {
                 userChoice = 'scissors';
+            } else if (button.innerHTML === 'Lizard') {
+                userChoice = 'lizard';
+            } else if (button.innerHTML === 'Spock') {
+                userChoice = 'spock';
             }
             const computerChoice = getComputerChoice();
             playRound(userChoice, computerChoice);
