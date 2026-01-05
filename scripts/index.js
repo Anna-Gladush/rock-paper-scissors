@@ -35,17 +35,87 @@ function playRound(humanChoice, computerChoice) {
         p.innerText = `It\'s a tie. 
 Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
 
-    } else if ((humanChoice === 'rock' && computerChoice === 'scissors') || (humanChoice === 'scissors' && computerChoice === 'paper') || (humanChoice === 'paper' && computerChoice === 'rock')) {
+    } else if (humanChoice === 'rock' && computerChoice === 'scissors') {
         humanScore ++;
-        p.innerText = `You win! ${humanChoice} beats ${computerChoice}. 
+        p.innerText = `You win! Rock crushes Scissors. 
 Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
-
-    }  else if ((humanChoice === 'scissors' && computerChoice === 'rock') || (humanChoice === 'paper' && computerChoice === 'scissors') || (humanChoice === 'rock' && computerChoice === 'paper')) {
+    }  else if (computerChoice === 'rock' && humanChoice === 'scissors') {
         computerScore ++;
-        p.innerText = `You lose! ${computerChoice} beats ${humanChoice}. 
+        p.innerText = `You lose! Rock crushes Scissors. 
 Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
-
-    }
+    }  else if (humanChoice === 'scissors' && computerChoice === 'paper') {
+        humanScore ++;
+        p.innerText = `You win! Scissors cuts Paper. 
+Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
+    }  else if (computerChoice === 'scissors' && humanChoice === 'paper') {
+        computerScore ++;
+        p.innerText = `You lose! Scissors cuts Paper. 
+Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
+    }   else if (humanChoice === 'paper' && computerChoice === 'rock') {
+        humanScore ++;
+        p.innerText = `You win! Paper covers Rock. 
+Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
+    }  else if (computerChoice === 'paper' && humanChoice === 'rock') {
+        computerScore ++;
+        p.innerText = `You lose! Paper covers Rock.
+Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
+    }  else if (humanChoice === 'rock' && computerChoice === 'lizard') {
+        humanScore ++;
+        p.innerText = `You win! Rock crushes Lizard. 
+Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
+    }  else if (computerChoice === 'rock' && humanChoice === 'lizard') {
+        computerScore ++;
+        p.innerText = `You lose! Rock crushes Lizard. 
+Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
+    }  else if (humanChoice === 'lizard' && computerChoice === 'spock') {
+        humanScore ++;
+        p.innerText = `You win! Lizard poisons Spock. 
+Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
+    }  else if (computerChoice === 'lizard' && humanChoice === 'spock') {
+        computerScore ++;
+        p.innerText = `You lose! Lizard poisons Spock. 
+Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
+    }  else if (humanChoice === 'spock' && computerChoice === 'scissors') {
+        humanScore ++;
+        p.innerText = `You win! Spock smashes Scissors. 
+Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
+    }  else if (computerChoice === 'spock' && humanChoice === 'scissors') {
+        computerScore ++;
+        p.innerText = `You lose! Spock smashes Scissors. 
+Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
+    }  else if (humanChoice === 'scissors' && computerChoice === 'lizard') {
+        humanScore ++;
+        p.innerText = `You win! Scissors decapitates Lizard. 
+Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
+    }  else if (computerChoice === 'scissors' && humanChoice === 'lizard') {
+        computerScore ++;
+        p.innerText = `You lose! Scissors decapitates Lizard. 
+Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
+    }  else if (humanChoice === 'lizard' && computerChoice === 'paper') {
+        humanScore ++;
+        p.innerText = `You win! Lizard eats Paper. 
+Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
+    }  else if (computerChoice === 'lizard' && humanChoice === 'paper') {
+        computerScore ++;
+        p.innerText = `You lose! Lizard eats Paper. 
+Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
+    }  else if (humanChoice === 'paper' && computerChoice === 'spock') {
+        humanScore ++;
+        p.innerText = `You win! Paper disproves Spock. 
+Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
+    }  else if (computerChoice === 'paper' && humanChoice === 'spock') {
+        computerScore ++;
+        p.innerText = `You lose! Paper disproves Spock. 
+Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
+    }  else if (humanChoice === 'spock' && computerChoice === 'rock') {
+        humanScore ++;
+        p.innerText = `You win! Spock vaporizes Rock. 
+Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
+    }  else if (computerChoice === 'spock' && humanChoice === 'rock') {
+        computerScore ++;
+        p.innerText = `You lose! Spock vaporizes Rock. 
+Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
+    }    
 }
 
 function playGame() {
