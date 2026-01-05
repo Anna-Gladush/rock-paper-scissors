@@ -4,14 +4,27 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 button {
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: white;
-    height: 60px;
-    width: 110px;
-    padding: 10px 10px;
-    border: 1px solid black;
-    border-radius: 50px;
-    font-size: 16px;
-    font-weight: bold;
+    border: none;
+    border-radius: 0;
+    height: 140px;
+    width: 140px;
     cursor: pointer;
+    margin: 10px;
+    color: transparent; /* Hiding text */
+}
+.rock {
+    background-image: url(../images/rock.svg);
+}.paper {
+    background-image: url(../images/paper.svg);
+}.scissors {
+    background-image: url(../images/scissors.svg);
+}.lizard {
+    background-image: url(../images/lizard.svg);
+}.spock {
+    background-image: url(../images/spock.svg);
 }
