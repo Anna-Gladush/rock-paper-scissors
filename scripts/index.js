@@ -3,6 +3,8 @@ let computerSelection;
 let humanScore = 0;
 let computerScore = 0;
 let tie = 0;
+const div = document.querySelector('.results');
+const buttons = document.querySelectorAll('.btn');
 
 function getComputerChoice() {
     const computerChoice = Math.random();
@@ -25,10 +27,8 @@ function getComputerChoice() {
 }
 
 function playRound(humanChoice, computerChoice) {
-    const div = document.querySelector('.results');
     div.innerHTML = '';
     const p = document.createElement('p');
-    p.classList.add('winner')
     div.appendChild(p);
     if (humanChoice === computerChoice) {
         tie ++;
@@ -119,8 +119,6 @@ Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${ti
 }
 
 function playGame() {
-    const buttons = document.querySelectorAll('.btn');
-
     buttons.forEach((button) => {
         let userChoice;
 

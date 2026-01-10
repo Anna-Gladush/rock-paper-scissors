@@ -3,6 +3,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
 }
 
 button {
@@ -27,4 +29,8 @@ button {
     background-image: url(../images/lizard.svg);
 }.spock {
     background-image: url(../images/spock.svg);
+}
+
+.results {
+    margin: 10px;
 }
