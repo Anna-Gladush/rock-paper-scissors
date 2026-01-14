@@ -34,3 +34,12 @@ button {
 .results {
     margin: 10px;
 }
+#choice {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#versus {
+    font-size: 36px;
+}

@@ -29,93 +29,50 @@ function getComputerChoice() {
 function playRound(humanChoice, computerChoice) {
     div.innerHTML = '';
     const p = document.createElement('p');
+    p.classList.add('.winner')
     div.appendChild(p);
-    if (humanChoice === computerChoice) {
-        tie ++;
-        p.innerText = `It\'s a tie. 
-Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
+    let winner = '';
+    let condition = '';
 
-    } else if (humanChoice === 'rock' && computerChoice === 'scissors') {
-        humanScore ++;
-        p.innerText = `You win! Rock crushes Scissors. 
-Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
-    }  else if (computerChoice === 'rock' && humanChoice === 'scissors') {
-        computerScore ++;
-        p.innerText = `You lose! Rock crushes Scissors. 
-Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
-    }  else if (humanChoice === 'scissors' && computerChoice === 'paper') {
-        humanScore ++;
-        p.innerText = `You win! Scissors cuts Paper. 
-Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
-    }  else if (computerChoice === 'scissors' && humanChoice === 'paper') {
-        computerScore ++;
-        p.innerText = `You lose! Scissors cuts Paper. 
-Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
-    }   else if (humanChoice === 'paper' && computerChoice === 'rock') {
-        humanScore ++;
-        p.innerText = `You win! Paper covers Rock. 
-Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
-    }  else if (computerChoice === 'paper' && humanChoice === 'rock') {
-        computerScore ++;
-        p.innerText = `You lose! Paper covers Rock.
-Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
-    }  else if (humanChoice === 'rock' && computerChoice === 'lizard') {
-        humanScore ++;
-        p.innerText = `You win! Rock crushes Lizard. 
-Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
-    }  else if (computerChoice === 'rock' && humanChoice === 'lizard') {
-        computerScore ++;
-        p.innerText = `You lose! Rock crushes Lizard. 
-Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
-    }  else if (humanChoice === 'lizard' && computerChoice === 'spock') {
-        humanScore ++;
-        p.innerText = `You win! Lizard poisons Spock. 
-Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
-    }  else if (computerChoice === 'lizard' && humanChoice === 'spock') {
-        computerScore ++;
-        p.innerText = `You lose! Lizard poisons Spock. 
-Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
-    }  else if (humanChoice === 'spock' && computerChoice === 'scissors') {
-        humanScore ++;
-        p.innerText = `You win! Spock smashes Scissors. 
-Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
-    }  else if (computerChoice === 'spock' && humanChoice === 'scissors') {
-        computerScore ++;
-        p.innerText = `You lose! Spock smashes Scissors. 
-Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
-    }  else if (humanChoice === 'scissors' && computerChoice === 'lizard') {
-        humanScore ++;
-        p.innerText = `You win! Scissors decapitates Lizard. 
-Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
-    }  else if (computerChoice === 'scissors' && humanChoice === 'lizard') {
-        computerScore ++;
-        p.innerText = `You lose! Scissors decapitates Lizard. 
-Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
-    }  else if (humanChoice === 'lizard' && computerChoice === 'paper') {
-        humanScore ++;
-        p.innerText = `You win! Lizard eats Paper. 
-Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
-    }  else if (computerChoice === 'lizard' && humanChoice === 'paper') {
-        computerScore ++;
-        p.innerText = `You lose! Lizard eats Paper. 
-Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
-    }  else if (humanChoice === 'paper' && computerChoice === 'spock') {
-        humanScore ++;
-        p.innerText = `You win! Paper disproves Spock. 
-Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
-    }  else if (computerChoice === 'paper' && humanChoice === 'spock') {
-        computerScore ++;
-        p.innerText = `You lose! Paper disproves Spock. 
-Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
-    }  else if (humanChoice === 'spock' && computerChoice === 'rock') {
-        humanScore ++;
-        p.innerText = `You win! Spock vaporizes Rock. 
-Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
-    }  else if (computerChoice === 'spock' && humanChoice === 'rock') {
-        computerScore ++;
-        p.innerText = `You lose! Spock vaporizes Rock. 
-Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}`;
-    }    
+    if (humanChoice === computerChoice) {
+        winner ="It\'s a tie.";
+    } else if (humanChoice === 'rock' && computerChoice === 'scissors' || computerChoice === 'rock' && humanChoice === 'scissors'){
+        winner = humanChoice === 'rock' ? 'You win!' : 'You lose!';
+        condition = 'Rock crushes Scissors.';
+    } else if (humanChoice === 'scissors' && computerChoice === 'paper' || computerChoice === 'scissors' && humanChoice === 'paper'){
+        winner = humanChoice === 'scissors' ? 'You win!' : 'You lose!';
+        condition = 'Scissors cuts Paper.';
+    } else if (humanChoice === 'paper' && computerChoice === 'rock' || computerChoice === 'paper' && humanChoice === 'rock'){
+        winner = humanChoice === 'paper' ? 'You win!' : 'You lose!';
+        condition = 'Paper covers Rock.';
+    } else if (humanChoice === 'rock' && computerChoice === 'lizard' || computerChoice === 'rock' && humanChoice === 'lizard'){
+        winner = humanChoice === 'rock' ? 'You win!' : 'You lose!';
+        condition = 'Rock crushes Lizard.';
+    } else if (humanChoice === 'lizard' && computerChoice === 'spock' || computerChoice === 'lizard' && humanChoice === 'spock'){
+        winner = humanChoice === 'lizard' ? 'You win!' : 'You lose!';
+        condition = 'Lizard poisons Spock.';
+    } else if (humanChoice === 'spock' && computerChoice === 'scissors' || computerChoice === 'spock' && humanChoice === 'scissors'){
+        winner = humanChoice === 'spock' ? 'You win!' : 'You lose!';
+        condition = 'Spock smashes Scissors.';
+    } else if (humanChoice === 'scissors' && computerChoice === 'lizard' || computerChoice === 'scissors' && humanChoice === 'lizard'){
+        winner = humanChoice === 'scissors' ? 'You win!' : 'You lose!';
+        condition = 'Scissors decapitates Lizard.';
+    } else if (humanChoice === 'lizard' && computerChoice === 'paper' || computerChoice === 'lizard' && humanChoice === 'paper'){
+        winner = humanChoice === 'lizard' ? 'You win!' : 'You lose!';
+        condition = 'Lizard eats Paper.';
+    } else if (humanChoice === 'paper' && computerChoice === 'spock' || computerChoice === 'paper' && humanChoice === 'spock'){
+        winner = humanChoice === 'paper' ? 'You win!' : 'You lose!';
+        condition = 'Paper disproves Spock.';
+    } else if (humanChoice === 'spock' && computerChoice === 'rock' || computerChoice === 'spock' && humanChoice === 'rock'){
+        winner = humanChoice === 'spock' ? 'You win!' : 'You lose!';
+        condition = 'Spock vaporizes Rock.';
+    }
+
+    winner === 'You win!' ? humanScore++ : computerScore++;
+
+    p.innerHTML = `<p>${winner} ${condition}
+Your score: ${humanScore}, while Computer's score: ${computerScore}. Tie's: ${tie}</p>
+<div id="choice"><button class="${humanChoice}"></button><p id="versus">VS</p><button class="${computerChoice}"></button></div>`;
 }
 
 function playGame() {
