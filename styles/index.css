@@ -5,16 +5,19 @@ body {
     align-items: center;
     font-family: 'Courier New', Courier, monospace;
     font-size: 24px;
+    background-color: rgb(52, 82, 129);
+    color: white;
 }
 
 button {
     background-repeat: no-repeat;
     background-position: center;
-    background-color: white;
-    border: none;
-    border-radius: 0;
-    height: 140px;
-    width: 140px;
+    background-color: transparent;
+    border-color: rgb(255, 255, 136);
+    border-width: 4px;
+    border-radius: 90px;
+    height: 160px;
+    width: 160px;
     cursor: pointer;
     margin: 10px;
     color: transparent; /* Hiding text */

@@ -29,7 +29,6 @@ function getComputerChoice() {
 function playRound(humanChoice, computerChoice) {
     div.innerHTML = '';
     const p = document.createElement('p');
-    p.classList.add('.winner')
     div.appendChild(p);
     let winner = '';
     let condition = '';
@@ -99,14 +98,14 @@ function playGame() {
 }
 
 function gameScore() {
-    const p = document.querySelector('.winner')
-    if (humanScore === 5) {
-        p.innerText = 'You won the game! Congrats!';
+    const div = document.querySelector('.results')
+    if (humanScore >= 5) {
+        div.innerHTML = `<p>You won the game! Congrats!</p>`;
         humanScore = 0;
         computerScore = 0; 
         tie = 0;
-    } else if (computerScore === 5) {
-        p.innerText = 'Computer won the game! Better luck next time!';
+    } else if (computerScore >= 5) {
+        div.innerHTML = `<p>Computer won the game! Better luck next time!</p>`;
         humanScore = 0;
         computerScore = 0; 
         tie = 0;
