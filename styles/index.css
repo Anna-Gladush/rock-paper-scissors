@@ -1,20 +1,20 @@
 body {
+    background-color: #fcf2db;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'Courier New', Courier, monospace;
     font-size: 24px;
-    background-color: rgb(52, 82, 129);
-    color: white;
+    font-weight: bold;
+    color: #E26751;
 }
 
 button {
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent;
-    border-color: rgb(255, 255, 136);
-    border-width: 4px;
+    border: 4px solid #E26751;
     border-radius: 90px;
     height: 160px;
     width: 160px;
