@@ -6,6 +6,12 @@ let tie = 0;
 const div = document.querySelector('.results');
 const buttons = document.querySelectorAll('.btn');
 
+function startGame() {
+    const start = document.querySelector('.start')
+    const menu = document.querySelector('.menu')
+    start.addEventListener('click', () =>{menu.style.visibility = "hidden"})
+}
+
 function getComputerChoice() {
     const computerChoice = Math.random();
     if (computerChoice <= 1/5) {
@@ -98,7 +104,7 @@ function playGame() {
 }
 
 function gameScore() {
-    const div = document.querySelector('.results')
+    const div = document.querySelector('.results');
     if (humanScore >= 5) {
         div.innerHTML = `<p>You won the game! Congrats!</p>`;
         humanScore = 0;
@@ -111,5 +117,5 @@ function gameScore() {
         tie = 0;
     }
 }
-
+startGame();
 playGame();

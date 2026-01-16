@@ -9,7 +9,37 @@ body {
     font-weight: bold;
     color: #E26751;
 }
-
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;    
+    top: 10px;
+    height: 99vh;
+    width: 100vh;
+    background-color: #fcf2db;
+}
+.menu p {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 36px;
+}
+.start {
+    color:#E26751;
+    border-radius: 20px;
+    height: 90px;
+    width: 120px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #fcf2db;
+    box-shadow: 5px 5px 3px 3px #b24e3d;
+}
+.start:active {
+    margin-top: 20px;
+    margin-left: 20px;
+    box-shadow: 2px 2px 3px 1px #b24e3d;
+}
 button {
     background-repeat: no-repeat;
     background-position: center;
